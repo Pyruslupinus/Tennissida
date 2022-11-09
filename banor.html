@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head lang="sv">
+    <title>Banor</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="tennisStyle.css" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <script src="tennisScript.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="menu">Hem</a></li>
+          <li class="active">
+            <a href="banor.html" class="menu">Banor</a>
+          </li>
+          <li><a href="omkl.html" class="menu">Omklädningsrum</a></li>
+          <li><a href="bastu.html" class="menu">Bastu</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img
+        src="pictures/tennis-bana.jpg"
+        alt="Foto taget uppifrån: Kvinna som slår till en tennisboll på en grön tennisplan"
+        width="100%"
+        height="auto"
+      />
+
+      <section class="two-colum-grid">
+        <h1>Banor</h1>
+        <p>
+          Vi har både inomhus- och utomhusbanor. Banorna används för våra
+          gruppträningar, men kan även bokas i formuläret längst ner på sidan
+          <a href="#bokning-bana">(klicka här)</a>. Banorna går att boka
+          samtliga dagar mellan 8.00 och 18.00. Obeservera att utomhusbanorna
+          enbart är tillgängliga mellan april och september.
+        </p>
+      </section>
+      <section class="two-colum-grid">
+        <h2>Inomhusbanor</h2>
+        <p>
+          Vi har två inomhusbanor: bana 1 och bana 2. Båda banorna är filtbanor,
+          vilket gör de lämpliga för motion då de är mer skonsama mot kroppen än
+          våra utebanor. Obesververa att skor med dobbar eller likande inte är
+          tillåtna på innomhusbanorna.
+        </p>
+      </section>
+      <section class="two-colum-grid">
+        <h2>Utomhusbanor</h2>
+        <p>
+          Vi har tre utomhusbanor: bana 3, bana 4 och bana 5. Båda banorna är av
+          typen "hard court" och består av asfalt med syntetiskt överdrag.
+          Utomhusbanorna är tillgängliga mellan april och september.
+        </p>
+        <p class="textbox">
+          Viste du att:<br />
+          Tennisbanor är byggda med dränerande asfalt
+        </p>
+      </section>
+
+      <h2>Boka bana</h2>
+      <p>Fyll i formuläret nedan för att boka bana.</p>
+      <form class="coloredBackground" id="bokning-bana" name="bokning-bana">
+        <label for="namn"
+          >För- och efternamn:
+          <input type="text" name="namn" id="namn" required
+        /></label>
+        <label for="medlemsnummer"
+          >Medlemsnumer:
+          <input
+            type="number"
+            name="medlemsnummer"
+            id="medlemsnummer"
+            min="1"
+            max="100"
+            required
+        /></label>
+        <label for="bana"
+          >Bana:
+          <select name="bana" id="bana" required>
+            <option value="">(välj en bana)</option>
+            <option value="1">Bana 1 (inomhus)</option>
+            <option value="2">Bana 2 (inomhus)</option>
+            <option value="3">Bana 3 (utomhus)</option>
+            <option value="4">Bana 4 (utomhus)</option>
+            <option value="5">Bana 5 (utomhus)</option>
+          </select>
+        </label>
+        <label for="datum"
+          >Datum: <input type="date" name="datum" id="datum" required
+        /></label>
+        <label for="tid"
+          >Tid:
+          <select name="tid" id="tid" required>
+            <option value="">(välj ett klockslag)</option>
+            <option value="8.00">8.00-10.00</option>
+            <option value="10.00">10.00-12.00</option>
+            <option value="12.00">12.00-14.00</option>
+            <option value="14.00">14.00-16.00</option>
+            <option value="16.00">16.00-18.00</option>
+          </select>
+        </label>
+        <input type="submit" value="Skicka in" />
+      </form>
+    </main>
+  </body>
+</html>

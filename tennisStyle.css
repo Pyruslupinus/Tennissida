@@ -1,0 +1,118 @@
+:root {
+  --englishViolet: #443850;
+  --grullo: #bcaa99;
+  --sugarPlum: #8e5572;
+  --darkSugarPlum: #73455d;
+}
+body {
+  font-family: Verdana;
+}
+main {
+  width: 85%;
+  margin: auto;
+}
+h1,
+h2 {
+  color: var(--englishViolet);
+}
+
+.coloredBackground {
+  background-color: var(--sugarPlum);
+  padding: 1em;
+  color: white;
+  border: 1px solid var(--sugarPlum);
+  border-radius: 1em;
+}
+
+.textbox {
+  background-color: var(--grullo);
+  color: var(--englishViolet);
+  padding: 0.5em;
+  width: 25%;
+  min-width: 150px;
+  max-width: 500px;
+  border: 1px solid var(--grullo);
+  border-radius: 1rem;
+}
+
+blockquote {
+  text-align: left;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+}
+a {
+  color: var(--englishViolet);
+}
+
+h1 {
+  font-weight: bold;
+}
+/*Meny*/
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--sugarPlum);
+  top: 0;
+  width: 100%;
+}
+
+li a:hover {
+  background-color: var(--darkSugarPlum);
+}
+.active {
+  background-color: var(--englishViolet);
+}
+li {
+  float: left;
+  font-family: Verdana;
+}
+
+a.menu {
+  display: block;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+/*Formulär*/
+form {
+  width: 60%;
+  max-width: 500px;
+  min-width: 300px;
+}
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  margin: 1em 0;
+}
+
+input,
+select {
+  width: 100%;
+  background-color: white;
+  font-family: Verdana;
+  border-style: none;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+  min-height: 2em;
+}
+
+.inline {
+  float: left;
+  width: unset;
+}
+
+/*Layout
+.two-colum-grid {
+
+}*/

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head lang="sv">
+    <title>Omklädningsrum</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" href="tennisStyle.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="menu">Hem</a></li>
+          <li><a href="banor.html" class="menu">Banor</a></li>
+          <li><a href="omkl.html" class="menu">Omklädningsrum</a></li>
+          <li><a href="bastu.html" class="menu">Bastu</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Omklädningsrum</h1>
+      <p>
+        Vi har i nuläget tre omklädningsrum, ett för herrar, ett för damer och
+        ett rollstolsanpassat. Samtliga omklädningsrum har enskilda dushrum.
+        Omklädningsrummen går att boka mellan 8.00 och 16.00 samtliga dagar. Du
+        kan boka omklädningsrum i formuläret nedan.
+      </p>
+      <h2>Boka omklädningsrum</h2>
+      <p>Fyll i formuläret nedan för att boka omklädningsrum.</p>
+      <form class="coloredBackground" name="bokning-omkl">
+        <label for="namn"
+          >För- och efternamn:
+          <input type="text" name="namn" id="namn" required />
+        </label>
+        <label for="medlemsnummer"
+          >Medlemsnumer:
+          <input
+            type="number"
+            name="medlemsnummer"
+            id="medlemsnummer"
+            min="1"
+            max="100"
+            required
+          />
+        </label>
+        <fieldset>
+          <legend>Välj omklädningsrum:</legend>
+          <label for="dam" class="inline"
+            ><input
+              type="radio"
+              id="dam"
+              name="omklrum"
+              class="inline"
+              required
+            />
+            Dam
+          </label>
+          <label for="herr" class="inline">
+            <input type="radio" id="herr" name="omklrum" class="inline" />
+            Herr</label
+          >
+          <label for="rullstol" class="inline"
+            ><input type="radio" id="rullstol" name="omklrum" class="inline" />
+            Rullstol
+          </label>
+        </fieldset>
+        <label for="datum"
+          >Datum: <input type="date" name="datum" id="datum" required
+        /></label>
+        <label for="tid"
+          >Tid:
+          <select name="tid" id="tid" required>
+            <option value="">(välj ett klockslag)</option>
+            <option value="8.00">8.00-9.00</option>
+            <option value="9.00">9.00-10.00</option>
+            <option value="10.00">10.00-11.00</option>
+            <option value="11.00">11.00-12.00</option>
+            <option value="12.00">12.00-13.00</option>
+            <option value="13.00">13.00-14.00</option>
+            <option value="14.00">14.00-15.00</option>
+            <option value="15.00">15.00-16.00</option>
+          </select>
+        </label>
+        <input type="submit" value="Skicka in" />
+      </form>
+    </main>
+  </body>
+</html>
