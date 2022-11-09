@@ -41,6 +41,7 @@ blockquote {
   min-width: 300px;
   max-width: 500px;
 }
+
 a {
   color: var(--englishViolet);
 }
@@ -48,7 +49,13 @@ a {
 h1 {
   font-weight: bold;
 }
+
 /*Meny*/
+header {
+  position: sticky;
+  top: 0;
+}
+
 ul.menu {
   list-style-type: none;
   margin: 0;
