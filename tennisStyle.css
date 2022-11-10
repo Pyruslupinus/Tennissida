@@ -59,6 +59,13 @@ blockquote {
   margin: 0;
 }
 
+.special-font {
+  font-family: Comfortaa, sans-serif;
+}
+.medium-font {
+  font-size: 1.5rem;
+}
+
 /*Grid*/
 .grid-container {
   margin: 2rem;
@@ -74,6 +81,10 @@ blockquote {
 
 .grid-row-span-two {
   grid-row: span 2;
+}
+
+.grid-row-span-three {
+  grid-row: span 3;
 }
 @media (min-width: 50em) {
   .grid-container {
@@ -114,10 +125,6 @@ li a:hover {
 .active {
   background-color: var(--englishViolet);
 }
-li {
-  float: left;
-  font-family: Verdana;
-}
 
 a.menu {
   display: block;
@@ -127,6 +134,13 @@ a.menu {
   text-decoration: none;
   font-family: Comfortaa, sans-serif;
 }
+
+@media (min-width: 40em) {
+  li {
+    float: left;
+  }
+}
+
 /*Formulär*/
 form {
   margin: 0 auto 2em;
