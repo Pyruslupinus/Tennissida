@@ -11,6 +11,15 @@ body {
 h1,
 h2 {
   color: var(--englishViolet);
+  font-family: Comfortaa, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.negative-margin-bottom {
+  margin-bottom: -0.5em;
 }
 
 .coloredBackground {
@@ -37,30 +46,50 @@ blockquote {
   max-width: 500px;
 }
 
-a {
-  color: var(--englishViolet);
-}
-
-h1 {
-  font-weight: bold;
-}
-
 .round-corners {
   border-radius: 3rem;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.big-font {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
 /*Grid*/
-
 .grid-container {
-  margin: 5rem;
+  margin: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: top;
+  align-content: top;
 }
 
-.grid-span-two {
-  grid-column: span 2;
+.grid-row-one {
+  grid-row-start: 1;
 }
+
+.grid-row-span-two {
+  grid-row: span 2;
+}
+@media (min-width: 50em) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-col-right {
+    grid-column-start: 2;
+  }
+  .grid-row-two {
+    grid-row-start: 2;
+  }
+  .grid-span-two {
+    grid-column: span 2;
+  }
+}
+
 /*Meny*/
 header {
   position: sticky;
@@ -96,14 +125,14 @@ a.menu {
   color: white;
   text-align: center;
   text-decoration: none;
+  font-family: Comfortaa, sans-serif;
 }
 /*Formulär*/
 form {
-  width: 60%;
+  margin: 0 auto 2em;
   max-width: 500px;
-  min-width: 300px;
+  min-width: 200px;
 }
-
 fieldset {
   border: none;
 }
@@ -118,7 +147,9 @@ select {
   width: 100%;
   background-color: white;
   font-family: Verdana;
-  border-style: none;
+  border: none;
+  box-sizing: border-box;
+  min-height: 2em;
 }
 
 input[type="submit"] {
@@ -129,6 +160,7 @@ input[type="submit"] {
 }
 
 .inline {
-  float: left;
+  vertical-align: middle;
+  margin: 0 0.5em 0 0;
   width: unset;
 }
