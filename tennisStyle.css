@@ -7,10 +7,7 @@
 body {
   font-family: Verdana;
 }
-main {
-  width: 85%;
-  margin: auto;
-}
+
 h1,
 h2 {
   color: var(--englishViolet);
@@ -20,7 +17,6 @@ h2 {
   background-color: var(--sugarPlum);
   padding: 1em;
   color: white;
-  border: 1px solid var(--sugarPlum);
   border-radius: 1em;
 }
 
@@ -31,8 +27,7 @@ h2 {
   width: 25%;
   min-width: 150px;
   max-width: 500px;
-  border: 1px solid var(--grullo);
-  border-radius: 1rem;
+  border-radius: 1em;
 }
 
 blockquote {
@@ -50,10 +45,28 @@ h1 {
   font-weight: bold;
 }
 
+.round-corners {
+  border-radius: 3rem;
+}
+
+/*Grid*/
+
+.grid-container {
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.grid-span-two {
+  grid-column: span 2;
+}
 /*Meny*/
 header {
   position: sticky;
   top: 0;
+  width: 100%;
+  background-color: var(--sugarPlum);
 }
 
 ul.menu {
@@ -90,6 +103,7 @@ form {
   max-width: 500px;
   min-width: 300px;
 }
+
 fieldset {
   border: none;
 }
@@ -118,8 +132,3 @@ input[type="submit"] {
   float: left;
   width: unset;
 }
-
-/*Layout
-.two-colum-grid {
-
-}*/
