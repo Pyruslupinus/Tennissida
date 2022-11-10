@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
     <link rel="stylesheet" href="tennisStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
   </head>
   <body>
     <header>
@@ -18,71 +22,107 @@
       </nav>
     </header>
     <main>
-      <h1>Omklädningsrum</h1>
-      <p>
-        Vi har i nuläget tre omklädningsrum, ett för herrar, ett för damer och
-        ett rollstolsanpassat. Samtliga omklädningsrum har enskilda dushrum.
-        Omklädningsrummen går att boka mellan 8.00 och 16.00 samtliga dagar. Du
-        kan boka omklädningsrum i formuläret nedan.
-      </p>
-      <h2>Boka omklädningsrum</h2>
-      <p>Fyll i formuläret nedan för att boka omklädningsrum.</p>
-      <form class="coloredBackground" name="bokning-omkl">
-        <label for="namn"
-          >För- och efternamn:
-          <input type="text" name="namn" id="namn" required />
-        </label>
-        <label for="medlemsnummer"
-          >Medlemsnumer:
-          <input
-            type="number"
-            name="medlemsnummer"
-            id="medlemsnummer"
-            min="1"
-            max="100"
-            required
+      <article class="grid-container">
+        <section class="grid-col-right grid-row-one">
+          <img
+            src="pictures/omkl.jpg"
+            alt="träbänkar omgivna av skåp med
+          träluckor i tre plan"
+            width="100%"
+            class="round-corners"
           />
-        </label>
-        <fieldset>
-          <legend>Välj omklädningsrum:</legend>
-          <label for="dam" class="inline"
-            ><input
-              type="radio"
-              id="dam"
-              name="omklrum"
-              class="inline"
-              required
-            />
-            Dam
-          </label>
-          <label for="herr" class="inline">
-            <input type="radio" id="herr" name="omklrum" class="inline" />
-            Herr</label
-          >
-          <label for="rullstol" class="inline"
-            ><input type="radio" id="rullstol" name="omklrum" class="inline" />
-            Rullstol
-          </label>
-        </fieldset>
-        <label for="datum"
-          >Datum: <input type="date" name="datum" id="datum" required
-        /></label>
-        <label for="tid"
-          >Tid:
-          <select name="tid" id="tid" required>
-            <option value="">(välj ett klockslag)</option>
-            <option value="8.00">8.00-9.00</option>
-            <option value="9.00">9.00-10.00</option>
-            <option value="10.00">10.00-11.00</option>
-            <option value="11.00">11.00-12.00</option>
-            <option value="12.00">12.00-13.00</option>
-            <option value="13.00">13.00-14.00</option>
-            <option value="14.00">14.00-15.00</option>
-            <option value="15.00">15.00-16.00</option>
-          </select>
-        </label>
-        <input type="submit" value="Skicka in" />
-      </form>
+        </section>
+        <section>
+          <h1 class="big-font">Omklädningsrum</h1>
+          <p>
+            Vi har i nuläget tre omklädningsrum, ett för herrar, ett för damer
+            och ett rollstolsanpassat. Samtliga omklädningsrum har enskilda
+            dushrum och skåp för förvarning av saker. Medtag eget lås.
+            Omklädningsrummen går att boka mellan 8.00 och 16.00 samtliga dagar.
+            Du kan boka omklädningsrum i formuläret nedan.
+          </p>
+          <h2>Rullstol</h2>
+          <p>
+            I omklädningsrummet anpassat för rullstol är dushen utrustad med
+            dushpall såväl som stödhandtag, det finns inte heller några lister
+            eller liknande så du kan enkelt rulla in i dushen.
+          </p>
+          <p>
+            Skåpen är större och placerade i lämplig höjd. Det finns bänkar för
+            den som önskar, men också gott om utrymme för rullstol. Dörrarna har
+            fri passage på 84 cm och smalaste området förutom dessa är 90 cm.
+          </p>
+        </section>
+        <section class="grid-span-two">
+          <h2 class="align-center negative-margin-bottom">
+            Boka omklädningsrum
+          </h2>
+          <p class="align-center">
+            Fyll i formuläret nedan för att boka omklädningsrum.
+          </p>
+          <form class="coloredBackground" name="bokning-omkl">
+            <label for="namn"
+              >För- och efternamn:
+              <input type="text" name="namn" id="namn" required />
+            </label>
+            <label for="medlemsnummer"
+              >Medlemsnumer:
+              <input
+                type="number"
+                name="medlemsnummer"
+                id="medlemsnummer"
+                min="1"
+                max="100"
+                required
+              />
+            </label>
+            <fieldset>
+              <legend>Välj omklädningsrum:</legend>
+              <label for="dam" class="inline"
+                ><input
+                  type="radio"
+                  id="dam"
+                  name="omklrum"
+                  class="inline"
+                  required
+                />
+                Dam
+              </label>
+              <label for="herr" class="inline">
+                <input type="radio" id="herr" name="omklrum" class="inline" />
+                Herr</label
+              >
+              <label for="rullstol" class="inline"
+                ><input
+                  type="radio"
+                  id="rullstol"
+                  name="omklrum"
+                  class="inline"
+                />
+                Rullstol
+              </label>
+            </fieldset>
+            <label for="datum"
+              >Datum: <input type="date" name="datum" id="datum" required
+            /></label>
+            <label for="tid"
+              >Tid:
+              <select name="tid" id="tid" required>
+                <option value="">(välj ett klockslag)</option>
+                <option value="8.00">8.00-9.00</option>
+                <option value="9.00">9.00-10.00</option>
+                <option value="10.00">10.00-11.00</option>
+                <option value="11.00">11.00-12.00</option>
+                <option value="12.00">12.00-13.00</option>
+                <option value="13.00">13.00-14.00</option>
+                <option value="14.00">14.00-15.00</option>
+                <option value="15.00">15.00-16.00</option>
+              </select>
+            </label>
+            <input type="submit" value="Skicka in" />
+          </form>
+        </section>
+      </article>
     </main>
   </body>
 </html>

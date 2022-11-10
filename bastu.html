@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
     <link rel="stylesheet" href="tennisStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
   </head>
   <body>
     <header>
@@ -18,47 +22,56 @@
       </nav>
     </header>
     <main>
-      <h1>Bastu</h1>
-      <p>
-        Vi har en bastu vilken är lokaliserad mellan omklädningsrummen för dam
-        och herr. Bastun är könsnetural och kan bokas mellan 8.00 och 16.00 alla
-        dagar. Förutsatt att bokning sker senast 24 timmar innan använding ser
-        vaktmästare till att bastun är uppvärmd i tid. Obeservera att bastun
-        tyvärr inte är tillgäng för rullstol i nuläget.
-      </p>
-      <h2>Boka bastu</h2>
-      <p>Fyll i formuläret nedan för att boka bastun.</p>
-      <form class="coloredBackground" name="bokning-bastu">
-        <label for="namn"
-          >För- och efternamn:
-          <input type="text" name="namn" id="namn" required
-        /></label>
-        <label for="medlemsnummer"
-          >Medlemsnumer:
-          <input
-            type="number"
-            name="medlemsnummer"
-            id="medlemsnummer"
-            min="1"
-            max="100"
-            required
-          />
-        </label>
-        <label for="datum"
-          >Datum: <input type="date" name="datum" id="datum" required
-        /></label>
-        <label for="tid"
-          >Tid:
-          <select name="tid" id="tid" required>
-            <option value="">(välj ett klockslag)</option>
-            <option value="8.00">8.00-10.00</option>
-            <option value="10.00">10.00-12.00</option>
-            <option value="12.00">12.00-14.00</option>
-            <option value="14.00">14.00-16.00</option>
-          </select>
-        </label>
-        <input type="submit" value="Skicka in" />
-      </form>
+      <article class="grid-container">
+        <section>
+          <h1 class="big-font">Bastu</h1>
+          <p>
+            Vi har en bastu vilken är lokaliserad mellan omklädningsrummen för
+            dam och herr. Bastun är könsnetural och kan bokas mellan 8.00 och
+            16.00 alla dagar. Förutsatt att bokning sker senast 24 timmar innan
+            använding ser vaktmästare till att bastun är uppvärmd i tid.
+            Obeservera att bastun tyvärr inte är tillgäng för rullstol i
+            nuläget.
+          </p>
+        </section>
+        <section>
+          <h2 class="align-center negative-margin-bottom">Boka bastu</h2>
+          <p class="align-center">
+            Fyll i formuläret nedan för att boka bastun.
+          </p>
+          <form class="coloredBackground" name="bokning-bastu">
+            <label for="namn"
+              >För- och efternamn:
+              <input type="text" name="namn" id="namn" required
+            /></label>
+            <label for="medlemsnummer"
+              >Medlemsnumer:
+              <input
+                type="number"
+                name="medlemsnummer"
+                id="medlemsnummer"
+                min="1"
+                max="100"
+                required
+              />
+            </label>
+            <label for="datum"
+              >Datum: <input type="date" name="datum" id="datum" required
+            /></label>
+            <label for="tid"
+              >Tid:
+              <select name="tid" id="tid" required>
+                <option value="">(välj ett klockslag)</option>
+                <option value="8.00">8.00-10.00</option>
+                <option value="10.00">10.00-12.00</option>
+                <option value="12.00">12.00-14.00</option>
+                <option value="14.00">14.00-16.00</option>
+              </select>
+            </label>
+            <input type="submit" value="Skicka in" />
+          </form>
+        </section>
+      </article>
     </main>
   </body>
 </html>
