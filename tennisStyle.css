@@ -17,14 +17,21 @@ h1,
 h2 {
   color: var(--englishViolet);
   font-family: Comfortaa, sans-serif;
+  margin-top: 1em;
+}
+
+p {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 h1 {
   font-weight: bold;
 }
 
-.negative-margin-bottom {
-  margin-bottom: -0.5em;
+a {
+  color: var(--sugarPlum);
+  text-decoration: none;
 }
 
 .coloredBackground {
@@ -46,8 +53,8 @@ h1 {
 
 blockquote {
   text-align: left;
-  width: 50%;
-  min-width: 300px;
+  width: 70%;
+  min-width: 150px;
   max-width: 500px;
 }
 
@@ -60,21 +67,49 @@ blockquote {
 }
 
 .big-font {
-  font-size: 3.5rem;
+  font-size: 3em;
   margin: 0;
 }
 
 .special-font {
   font-family: Comfortaa, sans-serif;
 }
+
 .medium-font {
-  font-size: 1.5rem;
+  font-size: 1.5em;
+}
+
+@media (max-width: 30em) {
+  h1,
+  .big-font {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 7vw;
+  }
+
+  blockquote.medium-font {
+    font-size: 6vw;
+  }
+  a.medium-font {
+    font-size: 6vw;
+  }
+
+  p {
+    font-size: 5vw;
+  }
+
+  blockquote {
+    font-size: 5vw;
+    width: 100%;
+  }
 }
 
 /*Grid*/
 .grid-container {
-  margin: 2rem;
   display: grid;
+  margin: 1rem;
   gap: 2rem;
   align-items: top;
   align-content: top;
@@ -94,6 +129,7 @@ blockquote {
 @media (min-width: 50em) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
+    margin: 2.5rem;
   }
   .grid-col-right {
     grid-column-start: 2;
