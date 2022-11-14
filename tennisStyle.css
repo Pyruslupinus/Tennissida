@@ -115,7 +115,7 @@ blockquote {
   margin: 1rem;
   gap: 2rem;
   align-items: top;
-  align-content: top;
+  max-width: 90em;
 }
 
 .grid-row-one {
@@ -133,7 +133,8 @@ blockquote {
 @media (min-width: 50em) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    margin: 2.5rem;
+    padding: 2.5em;
+    margin: auto;
   }
   .grid-col-right {
     grid-column-start: 2;
