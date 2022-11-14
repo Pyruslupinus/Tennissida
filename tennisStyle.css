@@ -249,9 +249,19 @@ ul li:hover {
 /*Formulär*/
 form {
   margin: 0 auto 2em;
-  max-width: 500px;
   min-width: 200px;
+  width: 100%;
 }
+@media (min-width: 40em) {
+  form {
+    width: 50%;
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 fieldset {
   border: none;
 }
