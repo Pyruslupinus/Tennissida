@@ -33,6 +33,9 @@ a {
   color: var(--sugarPlum);
   text-decoration: none;
 }
+a:hover:not(.menu) {
+  text-decoration: underline;
+}
 
 .coloredBackground {
   background-color: var(--sugarPlum);
@@ -112,7 +115,7 @@ blockquote {
   margin: 1rem;
   gap: 2rem;
   align-items: top;
-  align-content: top;
+  max-width: 90em;
 }
 
 .grid-row-one {
@@ -126,10 +129,12 @@ blockquote {
 .grid-row-span-three {
   grid-row: span 3;
 }
+
 @media (min-width: 50em) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    margin: 2.5rem;
+    padding: 2.5em;
+    margin: auto;
   }
   .grid-col-right {
     grid-column-start: 2;
@@ -143,7 +148,6 @@ blockquote {
 }
 
 /*Meny*/
-
 header a {
   text-decoration: none;
   font-family: Comfortaa, sans-serif;
@@ -242,12 +246,23 @@ ul li:hover {
     display: block;
   }
 }
+
 /*Formulär*/
 form {
   margin: 0 auto 2em;
-  max-width: 500px;
   min-width: 200px;
+  width: 100%;
 }
+@media (min-width: 40em) {
+  form {
+    width: 50%;
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 fieldset {
   border: none;
 }
