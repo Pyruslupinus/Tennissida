@@ -256,6 +256,7 @@ form {
 @media (min-width: 40em) {
   form {
     width: 50%;
+    min-width: 350px;
     height: 35em;
     display: flex;
     flex-direction: column;

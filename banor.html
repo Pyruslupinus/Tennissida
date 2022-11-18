@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css?family=Comfortaa"
     />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
-    <script src="tennisScript.js"></script>
   </head>
   <body>
     <header>
@@ -127,7 +126,14 @@
               </select>
             </label>
             <label for="datum"
-              >Datum: <input type="date" name="datum" id="datum" required
+              >Datum:
+              <input
+                type="date"
+                name="datum"
+                id="datum"
+                min="2022-10-18"
+                max="2022-11-18"
+                required
             /></label>
             <label for="tid"
               >Tid:
@@ -145,5 +151,6 @@
         </section>
       </article>
     </main>
+    <script src="tennisScript.js"></script>
   </body>
 </html>
