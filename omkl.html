@@ -76,7 +76,14 @@
           <form class="coloredBackground" name="bokning-omkl">
             <label for="namn"
               >För- och efternamn:
-              <input type="text" name="namn" id="namn" required />
+              <input
+                type="text"
+                name="namn"
+                id="namn"
+                pattern="[a-öA-Ö{1, }]+[\s]+[a-öA-Ö{1, }]+.{0,}"
+                placeholder="Namn Namnsson"
+                required
+              />
             </label>
             <label for="medlemsnummer"
               >Medlemsnumer:
