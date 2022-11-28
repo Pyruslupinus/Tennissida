@@ -159,6 +159,9 @@ header {
   height: 50px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100vw;
 }
 
 ul li {
@@ -229,7 +232,7 @@ ul li:hover {
 
 .mobile-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 0;
   height: calc(100vh-50px);
