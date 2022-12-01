@@ -1,8 +1,8 @@
 :root {
   --englishViolet: #443850;
   --grullo: #bcaa99;
-  --sugarPlum: #8e5572;
-  --darkSugarPlum: #73455d;
+  --sugarPlum: #73455d;
+  --darkSugarPlum: #6d4258;
 }
 * {
   padding: 0;
@@ -13,11 +13,13 @@ body {
   font-family: Verdana;
 }
 
-h1,
-h2 {
-  color: var(--englishViolet);
+h1, h2 {
   font-family: Comfortaa, sans-serif;
   margin-top: 1em;
+}
+
+.colored-text {
+  color: var(--englishViolet);
 }
 
 p {
@@ -30,7 +32,7 @@ h1 {
 }
 
 a {
-  color: var(--sugarPlum);
+  color: var(--sugarPlum)
   text-decoration: none;
 }
 a:hover:not(.menu) {
@@ -82,6 +84,10 @@ blockquote {
   font-size: 1.5em;
 }
 
+.margin {
+  margin: 1rem;
+}
+
 @media (max-width: 30em) {
   h1,
   .big-font {
@@ -110,6 +116,11 @@ blockquote {
 }
 
 /*Grid*/
+.another-grid {
+  display: grid;
+  max-width: 90em;
+  align-items: top;
+}
 .grid-container {
   display: grid;
   margin: 1rem;
@@ -131,6 +142,10 @@ blockquote {
 }
 
 @media (min-width: 50em) {
+  .another-grid {
+    padding: 2.5em;
+    margin: auto;
+  }
   .grid-container {
     grid-template-columns: 1fr 1fr;
     padding: 2.5em;
@@ -298,3 +313,44 @@ input[type="submit"] {
   margin: 0 0.5em 0 0;
   width: unset;
 }
+
+/*Träningsinformation*/
+.workout-groups {
+  background-color: var(--sugarPlum);
+  color: white;
+  border-radius: 0.8rem;
+  
+}
+button.heading {
+  width: 100%;
+  background-color: var(--sugarPlum);
+  color: white;
+  text-align: left;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 1rem;
+  
+}
+
+p.text {
+  width: 100%;
+
+  background-color: var(--sugarPlum);
+  color: white;
+
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.searchbar {
+  border: solid 2px var(--englishViolet); 
+  border-radius: 0.5rem;
+  height: 2rem;
+}
+ @media (min-width: 40em){
+  .searchbar {
+    width: 50%;
+    margin: auto;
+  }
+ }
