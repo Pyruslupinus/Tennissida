@@ -1,9 +1,22 @@
+/*
+Färgvariabler
+Allmän CSS + allmänna klasser för stil
+Allämn CSS + allmänna klasser för stil för små skärmar
+Grid
+Grid för stora skärmar
+Meny
+Meny för små skärmar
+Formmlär
+Träningsinformation
+*/
+
 :root {
   --englishViolet: #443850;
   --grullo: #bcaa99;
   --sugarPlum: #73455d;
   --darkSugarPlum: #6d4258;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -13,54 +26,59 @@ body {
   font-family: Verdana;
 }
 
-h1, h2 {
-  font-family: Comfortaa, sans-serif;
+h1,
+h2 {
   margin-top: 1em;
+  font-family: Comfortaa, sans-serif;
 }
-
-.colored-text {
-  color: var(--englishViolet);
+h1 {
+  font-weight: bold;
 }
-
 p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
 
-h1 {
-  font-weight: bold;
-}
-
 a {
-  color: var(--sugarPlum)
+  color: var(--sugarPlum);
   text-decoration: none;
 }
+
 a:hover:not(.menu) {
   text-decoration: underline;
 }
 
-.coloredBackground {
-  background-color: var(--sugarPlum);
-  padding: 1em;
-  color: white;
-  border-radius: 1em;
-}
-
-.textbox {
-  background-color: var(--grullo);
-  color: var(--englishViolet);
-  padding: 0.5em;
-  width: 25%;
-  min-width: 150px;
-  max-width: 500px;
-  border-radius: 1em;
-}
-
 blockquote {
   text-align: left;
+
   width: 70%;
   min-width: 150px;
   max-width: 500px;
+}
+
+/*Allmänna klasser för stil*/
+.colored-text {
+  color: var(--englishViolet);
+}
+
+.coloredBackground {
+  padding: 1em;
+  border-radius: 1em;
+
+  background-color: var(--sugarPlum);
+  color: white;
+}
+
+.textbox {
+  width: 25%;
+  min-width: 150px;
+  max-width: 500px;
+
+  padding: 0.5em;
+  border-radius: 1em;
+
+  background-color: var(--grullo);
+  color: var(--englishViolet);
 }
 
 .round-corners {
@@ -72,8 +90,8 @@ blockquote {
 }
 
 .big-font {
-  font-size: 3em;
   margin: 0;
+  font-size: 3em;
 }
 
 .special-font {
@@ -98,35 +116,39 @@ blockquote {
     font-size: 7vw;
   }
 
+  p {
+    font-size: 5vw;
+  }
+
+  blockquote {
+    width: 100%;
+
+    font-size: 5vw;
+  }
+
   blockquote.medium-font {
     font-size: 6vw;
   }
   a.medium-font {
     font-size: 6vw;
   }
-
-  p {
-    font-size: 5vw;
-  }
-
-  blockquote {
-    font-size: 5vw;
-    width: 100%;
-  }
 }
 
 /*Grid*/
 .another-grid {
+  align-items: top;
+
   display: grid;
   max-width: 90em;
-  align-items: top;
 }
 .grid-container {
-  display: grid;
-  margin: 1rem;
-  gap: 2rem;
   align-items: top;
+
+  display: grid;
   max-width: 90em;
+
+  gap: 2rem;
+  margin: 1rem;
 }
 
 .grid-row-one {
@@ -169,14 +191,18 @@ header a {
 }
 
 header {
-  padding: 0 20px;
-  background-color: var(--sugarPlum);
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
   position: sticky;
   top: 0;
+
+  display: flex;
+  justify-content: space-between;
+
   width: 100vw;
+  height: 50px;
+
+  padding: 0 20px;
+
+  background-color: var(--sugarPlum);
 }
 
 ul li {
@@ -187,11 +213,13 @@ ul a {
   color: white;
 }
 ul {
-  list-style: none;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  height: 100%;
+
+  list-style: none;
 }
 
 ul li:hover {
@@ -200,9 +228,9 @@ ul li:hover {
 }
 
 #brand {
-  font-weight: bold;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 #brand a {
@@ -211,16 +239,21 @@ ul li:hover {
 
 /*Meny för mobil*/
 #hamburger-icon {
-  margin: auto 0;
   display: none;
+
+  margin: auto 0;
+
   cursor: pointer;
 }
 
 #hamburger-icon div {
   width: 35px;
   height: 3px;
-  background-color: white;
+
   margin: 6px 0;
+
+  background-color: white;
+
   transition: 0.4s;
 }
 
@@ -241,17 +274,20 @@ ul li:hover {
 .open .mobile-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 50px;
+
   left: 0;
+  top: 50px;
+
   height: calc(100vh-50px);
   width: 100%;
+
   background-color: var(--darkSugarPlum);
 }
 
@@ -267,18 +303,19 @@ ul li:hover {
 
 /*Formulär*/
 form {
-  margin: 0 auto 2em;
-  min-width: 200px;
   width: 100%;
+  min-width: 200px;
+  margin: 0 auto 2em;
 }
 @media (min-width: 40em) {
   form {
-    width: 50%;
-    min-width: 350px;
-    height: 35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    width: 50%;
+    min-width: 350px;
+    height: 35em;
   }
 }
 
@@ -288,48 +325,56 @@ fieldset {
 
 label {
   display: block;
+
   margin: 1em 0;
 }
 
 input,
 select {
   width: 100%;
-  background-color: white;
-  font-family: Verdana;
-  border: none;
-  box-sizing: border-box;
   min-height: 2em;
+  border: none;
+
+  background-color: white;
+
+  font-family: Verdana;
 }
 
 input[type="submit"] {
   display: block;
-  margin: 1rem auto;
+
   width: 50%;
   min-height: 2em;
+
+  margin: 1rem auto;
 }
 
 .inline {
   vertical-align: middle;
-  margin: 0 0.5em 0 0;
+
   width: unset;
+
+  margin: 0 0.5em 0 0;
 }
 
 /*Träningsinformation*/
 .workout-groups {
+  border-radius: 0.8rem;
+
   background-color: var(--sugarPlum);
   color: white;
-  border-radius: 0.8rem;
-  
 }
 button.heading {
-  width: 100%;
-  background-color: var(--sugarPlum);
-  color: white;
   text-align: left;
-  padding-left: 1rem;
+  width: 100%;
+
   border: none;
   border-radius: 1rem;
-  
+
+  padding-left: 1rem;
+
+  background-color: var(--sugarPlum);
+  color: white;
 }
 
 p.text {
@@ -344,13 +389,15 @@ p.text {
 }
 
 .searchbar {
-  border: solid 2px var(--englishViolet); 
-  border-radius: 0.5rem;
   height: 2rem;
+
+  border: solid 2px var(--englishViolet);
+  border-radius: 0.5rem;
 }
- @media (min-width: 40em){
+@media (min-width: 40em) {
   .searchbar {
     width: 50%;
+
     margin: auto;
   }
- }
+}
