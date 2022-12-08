@@ -405,6 +405,10 @@ p.text {
   }
 }
 
+.screen-reader {
+  opacity: 0;
+  font-size: 0;
+}
 /*Kalender*/
 
 .calender {
